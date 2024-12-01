@@ -1,0 +1,13 @@
+Star 1:
+    Star one was difficult since I dont know any go so it and was fiddling with syntax.
+
+    The solution I ended up with is very bad, but hey it works...
+
+    If I choose to go back and fix my very bad solution I could either use a tree struct or a doubley linked list when reading into memory. I would have to give more thought.
+
+
+Star 2:
+
+    Star 2 was fairly easy by putting everything in a map and adding to it on occurance then calculating with it
+
+    The solution after it is read into memory is O of 2n, since it needs iterate through the list twice.
