@@ -13,12 +13,20 @@ func Abs(x int) int {
 	return x
 }
 
-// TimeIt runs a function and measures the time it takes to execute.
+// TimeIt runs a function and measures the average time it takes to execute.
 func TimeIt(taskName string, fn func()) {
-	start := time.Now()
-	fn() // Run the function
-	duration := time.Since(start)
+	var totalDuration time.Duration
+
+	runs := 10
+	for i := 0; i < runs; i++ {
+		start := time.Now()
+		fn() // Run the function
+		duration := time.Since(start)
+		totalDuration += duration
+	}
+
+	averageDuration := totalDuration / time.Duration(runs)
 
 	// Output the result
-	fmt.Printf("%s took %v\n", taskName, duration)
+	fmt.Printf("%s took %v\n\n", taskName, averageDuration)
 }

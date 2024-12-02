@@ -5,7 +5,7 @@ Star 1:
 
     If I choose to go back and fix my very bad solution I could either use a tree struct or a doubley linked list when reading into memory. I would have to give more thought.
 
-
+    I implemented a heap but is slower than my jank solution. I think the allocs are messing it up and need to pre allocate. See: https://www.reddit.com/r/golang/comments/18bdmpy/why_these_two_heap_solution_are_slower_than_sort/
 Star 2:
 
     Star 2 was fairly easy by putting everything in a map and adding to it on occurance then calculating with it

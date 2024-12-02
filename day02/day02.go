@@ -5,13 +5,13 @@ import (
 	"os"
 )
 
-// Solution for Day 2
-func SolveDay2() {
+// Solution for star 1 first attempt
+func SolveStar1Naive() int {
 	// Read the input file
 	file, err := os.Open("day02/input.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
-		return
+		return -1
 	}
 	defer file.Close()
 
@@ -36,6 +36,10 @@ func SolveDay2() {
 	}
 
 	*/
-	sum := 12
-	fmt.Println("Solution:", sum)
+	return -1
+}
+
+// Solution for star 2 first attempt
+func SolveStar2Naive() int {
+	return -1
 }
