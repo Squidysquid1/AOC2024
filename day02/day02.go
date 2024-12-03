@@ -1,8 +1,12 @@
 package day02
 
 import (
+	"aoc2024/utils"
+	"bufio"
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 // Solution for star 1 first attempt
@@ -15,31 +19,92 @@ func SolveStar1Naive() int {
 	}
 	defer file.Close()
 
-	/*// Process the input file line by line
-	var numbers []int
+	safe := 0
+	// Process the input file line by line
 	var scanner = bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
-		// Parse each line to an integer and store it in the numbers slice
-		num, err := strconv.Atoi(strings.TrimSpace(line))
-		if err != nil {
-			fmt.Println("Error parsing number:", err)
-			return
+
+		numbers := strings.Split(line, " ")
+
+		if checkIfSafe(numbers) {
+			safe++
 		}
-		numbers = append(numbers, num)
+
 	}
 
-	// Solve the puzzle (example: sum of numbers)
-	sum := 0
-	for _, num := range numbers {
-		sum += num
-	}
-
-	*/
-	return -1
+	return safe
 }
 
 // Solution for star 2 first attempt
 func SolveStar2Naive() int {
-	return -1
+	// Read the input file
+	file, err := os.Open("day02/simpleinput.txt")
+	if err != nil {
+		fmt.Println("Error opening file:", err)
+		return -1
+	}
+	defer file.Close()
+
+	safe := 0
+	// Process the input file line by line
+	var scanner = bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := scanner.Text()
+
+		numbers := strings.Split(line, " ")
+
+		if checkIfSafeWithOneBadLevel(numbers) {
+			safe++
+		}
+
+	}
+
+	return safe
+}
+
+func checkIfSafe(nums []string) bool {
+	previous, _ := strconv.Atoi(nums[0])
+	isAccending := true
+	for i := 1; i < len(nums); i++ {
+		curNum, _ := strconv.Atoi(nums[i])
+
+		difference := curNum - previous
+
+		if i == 1 {
+			// difference is positive it is decending
+			isAccending = difference > 0
+		}
+
+		if isAccending && difference <= 0 {
+			// if accending and next number is not
+			return false
+		} else if !isAccending && difference >= 0 {
+			// if decending and next number is not
+			return false
+		} else if utils.Abs(difference) > 3 {
+			// if the next difference is 2 big
+			return false
+		}
+
+		previous = curNum
+	}
+
+	return true
+}
+
+// Give up and brute force... so bad will revisit idk
+func checkIfSafeWithOneBadLevel(nums []string) bool {
+	if checkIfSafe(nums) {
+		return true
+	}
+
+	for index := range nums {
+		newSlice := append(nums[:index], nums[(index+1):]...)
+		fmt.Println(newSlice)
+		if checkIfSafe(newSlice) {
+			return true
+		}
+	}
+	return false
 }

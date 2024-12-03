@@ -28,6 +28,10 @@ func runDay(day string) {
 		fmt.Print("###########STAR 1###########\n\n")
 		fmt.Println("Solving Star 1 Nieve approach: ", day02.SolveStar1Naive())
 		utils.TimeIt("Star 1 Solution", func() { day02.SolveStar1Naive() })
+
+		fmt.Print("###########STAR 2###########\n\n")
+		fmt.Println("Solving Star 2 Nieve approach: ", day02.SolveStar2Naive())
+		//utils.TimeIt("Star 2 Solution", func() { day02.SolveStar2Naive() })
 	default:
 		fmt.Println("Invalid day:", day)
 	}

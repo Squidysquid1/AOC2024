@@ -1,3 +1,9 @@
 Star 1:
 
+I came up with a solution for star 1 pretty quickly, But want to revisit with a recursive solution as I did it for star 2. But didnt think of it right away.
+
 Star 2:
+
+I attempted to do a very fun recursive solution. I kept on hitting walls with edge cases. 
+
+I have to revisit when I have time
