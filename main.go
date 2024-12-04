@@ -3,6 +3,7 @@ package main
 import (
 	"aoc2024/day01"
 	"aoc2024/day02"
+	"aoc2024/day03"
 	"aoc2024/utils"
 	"fmt"
 	"os"
@@ -31,6 +32,15 @@ func runDay(day string) {
 
 		fmt.Print("###########STAR 2###########\n\n")
 		fmt.Println("Solving Star 2 Nieve approach: ", day02.SolveStar2Naive())
+		//utils.TimeIt("Star 2 Solution", func() { day02.SolveStar2Naive() })
+
+	case "3":
+		fmt.Print("###########STAR 1###########\n\n")
+		fmt.Println("Solving Star 1 Nieve approach: ", day03.SolveStar1Naive())
+		utils.TimeIt("Star 1 Solution", func() { day03.SolveStar1Naive() })
+
+		//fmt.Print("###########STAR 2###########\n\n")
+		//fmt.Println("Solving Star 2 Nieve approach: ", day03.SolveStar2Naive())
 		//utils.TimeIt("Star 2 Solution", func() { day02.SolveStar2Naive() })
 	default:
 		fmt.Println("Invalid day:", day)
