@@ -1,5 +1,6 @@
 Star 1:
-
+    I was able to do it pretty easily, but I do feel like my solution is long. I would like to compare to what other people did.
 
 Star 2:
 
+    Was pretty easy but there has to be a shorter solution, above my paygrade atm
