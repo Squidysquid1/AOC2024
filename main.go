@@ -37,7 +37,7 @@ func runDay(day string) {
 	case "3":
 		fmt.Print("###########STAR 1###########\n\n")
 		fmt.Println("Solving Star 1 Nieve approach: ", day03.SolveStar1Naive())
-		utils.TimeIt("Star 1 Solution", func() { day03.SolveStar1Naive() })
+		//utils.TimeIt("Star 1 Solution", func() { day03.SolveStar1Naive() })
 
 		//fmt.Print("###########STAR 2###########\n\n")
 		//fmt.Println("Solving Star 2 Nieve approach: ", day03.SolveStar2Naive())
