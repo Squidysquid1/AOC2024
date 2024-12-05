@@ -32,7 +32,6 @@ def SolveStar2():
     with open('day01/input.txt', 'r') as file:
         # Read each line in the file
         for line in file:
-            # Print each line
             nums = line.split("   ")
             leftNum.append(int(nums[0]))
             rightNum.append(int(nums[1]))

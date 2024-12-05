@@ -35,10 +35,9 @@ def SolveStar2():
     mulEnabled = True
     total = 0
     for instruction in toMultiply:
-        # dont
-        if instruction[1] != '':
+        if instruction[1] != '': # dont
             mulEnabled = False
-        elif instruction[2] != '':
+        elif instruction[2] != '': # do
             mulEnabled = True
         elif instruction[0] != '' and mulEnabled:
             nums = instruction[0].split(',')
