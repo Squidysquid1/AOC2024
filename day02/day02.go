@@ -1,7 +1,6 @@
 package day02
 
 import (
-	"aoc2024/utils"
 	"bufio"
 	"fmt"
 	"os"

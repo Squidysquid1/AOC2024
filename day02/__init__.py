@@ -1,0 +1,1 @@
+from.day02 import SolveStar1, SolveStar2

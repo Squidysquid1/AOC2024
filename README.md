@@ -1,12 +1,10 @@
-# Advent of code 2024 (GO edition)
+# Advent of code 2024
 
-This is my first round of learning Go by doing the advent of code.
-
-My initial solutions will be naive implementations to be sped up in future revisions.
+Began learning Go in this repo. While I did learn a lot, I ended up switching to python since I am able to write it a lot faster than Go.
 
 ## Running
 
 ### run a specific day
-go run main.go <dayNum(1-25)>
+python3 main.py <dayNum(1-25)>
 ### run all days
-go run main.go
+python3 main.py
