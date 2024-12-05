@@ -1,5 +1,6 @@
 Star 1:
-
+    Pretty simple after I was able to comprehend the prompt. Hardest part of the challenge
 
 Star 2:
 
+    Was a simple addition, Im glad there was no edgecases and I was able to swap  until it was solved ezpz
