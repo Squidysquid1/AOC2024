@@ -1,6 +1,6 @@
 import sys
 import utils
-import day01, day02, day03, day04, day05
+import day01, day02, day03, day04, day05, day06
 
 def runDay(day):
     print(f"###########DAY {day}###########")
@@ -48,12 +48,21 @@ def runDay(day):
             print("###########STAR 2###########\n")
             print("Solving Star 2:", day05.SolveStar2())
             utils.time_it("Star 2 Solution", day05.SolveStar2)
+        
+        case "6":
+            print("###########STAR 1###########\n")
+            print("Solving Star 1:", day06.SolveStar1())
+            utils.time_it("Star 1 Solution", day06.SolveStar1)
+
+            print("###########STAR 2###########\n")
+            print("Solving Star 2:", day06.SolveStar2())
+            #utils.time_it("Star 2 Solution", day06.SolveStar2)
         case _:
             print("Invalid day:", day)
 
 
 def runAllDays():
-    days = ["1", "2", "3", "4"]
+    days = ["1", "2", "3", "4", "5"]
 
     for day in days: 
         runDay(day)

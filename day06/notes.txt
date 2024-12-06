@@ -1,0 +1,7 @@
+Star 1:
+    This one was straight forward following the guards path
+
+Star 2:
+    my immediate idea was to brute force
+
+    I think you can solve with thinking about squares but i am still confused its 2 late for me to care :p
