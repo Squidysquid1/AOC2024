@@ -1,0 +1,4 @@
+Star 1:
+    Started out with manually iterating through combinations before I found out Im dumb. although I though it was cool using numbers to act as different combos
+Star 2:
+    Recursion is the simplest way to do all combos! took me a little but because did not include that the list needs to be empty when solution is found in my base case

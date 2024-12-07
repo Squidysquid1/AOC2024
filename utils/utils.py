@@ -2,7 +2,7 @@ import time
 
 def time_it(task_name, fn):
     total_duration = 0
-    runs = 10
+    runs = 2
     
     for _ in range(runs):
         start = time.time()
