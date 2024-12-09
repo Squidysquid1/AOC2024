@@ -1,14 +1,17 @@
 import sys
 import utils
-import day01, day02, day03, day04, day05, day06, day07
+import day01, day02, day03, day04, day05, day06, day07, day08
 
 def runDay(day):
     print(f"###########DAY {day}###########")
     match day:
         case "1":
             print("###########STAR 1###########\n")
-            print("Solving Star 1 Nieve approach:", day01.SolveStar1()) # faster using heap 2 come
+            print("Solving Star 1 Nieve approach:", day01.SolveStar1())  
             utils.time_it("Star 1 Solution", day01.SolveStar1)
+
+            print("Solving Star 1 Heap approach:", day01.SolveStar1Heap())  
+            utils.time_it("Star 1 Solution", day01.SolveStar1Heap)
 
             print("###########STAR 2###########\n")
             print("Solving Star 2:", day01.SolveStar2())
@@ -65,12 +68,21 @@ def runDay(day):
             print("###########STAR 2###########\n")
             print("Solving Star 2:", day07.SolveStar2())
             utils.time_it("Star 2 Solution", day07.SolveStar2)
+
+        case "8":
+            print("###########STAR 1###########\n")
+            print("Solving Star 1:", day08.SolveStar1())
+            #utils.time_it("Star 1 Solution", day08.SolveStar1)
+
+            #print("###########STAR 2###########\n")
+            #print("Solving Star 2:", day08.SolveStar2())
+            #utils.time_it("Star 2 Solution", day08.SolveStar2)
         case _:
             print("Invalid day:", day)
 
 
 def runAllDays():
-    days = ["1", "2", "3", "4", "5", "6", "7"]
+    days = ["1", "2", "3", "4", "5", "6", "7", "8"]
 
     for day in days: 
         runDay(day)

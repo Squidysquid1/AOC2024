@@ -1,0 +1,5 @@
+Star 1:
+Hardest day for me where I was just stuck and could not move.
+I tried to get the solution elsewhere and I know im on the right track but I still dont understand this line:
+but only when one of the antennas is twice as far away as the other. This means that for any pair of antennas with the same frequency, there are two antinodes, one on either side of them.
+Star 2:

@@ -1,5 +1,6 @@
 import re
 import math
+import heapq
 
 def SolveStar1():
 
@@ -56,5 +57,20 @@ def SolveStar2():
 
 
 # Use heap
-def SolveStar1Faster():
-    pass
+def SolveStar1Heap():
+    leftNum = []
+    rightNum = []
+    # Open the file in read mode
+    with open('day01/input.txt', 'r') as file:
+        # Read each line in the file
+        for line in file:
+            nums = line.split("   ")
+            heapq.heappush(leftNum,int(nums[0]))
+            heapq.heappush(rightNum,int(nums[1]))
+
+    
+    total = 0
+    while leftNum:
+        total += abs( heapq.heappop(rightNum) - heapq.heappop(leftNum) )
+
+    return total

@@ -1,1 +1,1 @@
-from.day01 import SolveStar1, SolveStar2
+from.day01 import SolveStar1, SolveStar2, SolveStar1Heap
